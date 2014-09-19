@@ -159,12 +159,12 @@ region allocators from last lecture.
 			\item The industry often creates discrete processors for specialized tasks that are eventually
 				incorporated into the CPU.
 			\item Examples:
-				\begin{enumerate}
-					\item The Intel 8087 math coprocessor or Floating Point Unit was an optional processor
+				\begin{description}
+					\item[FPU] The Intel 8087 math coprocessor or floating point unit was an optional processor
 						that shared memory with the 8088 CPU and was located in a socket next to it.
-					\item Graphics cards contain GPUs, but GPUs are often now included in the CPU.
-					\item Other examples: translation lookaside buffer (TLB) and vector machines
-				\end{enumerate}
+					\item[GPU] Graphics cards contain GPUs, but GPUs are often now included in the CPU.
+					\item[Other examples] Translation lookaside buffer (TLB) and vector machines
+				\end{description}
 		\end{enumerate}
 	\item Loop unrolling is process of replacing jumps with repeated code. It results in less
 		condition checking and more instruction level parallelism extraction.
