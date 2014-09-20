@@ -116,6 +116,32 @@
 We reviewed per-class allocators, custom pattern allocators, and
 region allocators from last lecture.
 
+\section{Architecture}
+
+We began the discussion about architectures with a description of the timeline of processors (chips) released over time. 
+
+Intel  released an 8-bit processor, in 1974, called 8080. It had no cache. Having no cache was actually advantageous:
+\begin{enumerate}
+\item We knew exactly how long each instruction in the assembly code would take, so the programs had a deterministic execution time. 
+\item Simplified Performance analysis.
+\item Simplified Optimization analysis. 
+\item Instruction scheduling.
+\end {enumerate}
+However, the maximum RAM size was only 64K.\\
+So, After 8080, Intel wanted to make chips which accommodate larger address sizes , which led to the release of 8088 in 1979( The chip used in IBM’s PC). 8088 (a variant of 8086) had 640 K of RAM, along with some rudimentary memory protection.\\
+
+IBM continued its development of faster, better chips with bigger word-sizes:  80286 in 1982 (16 bit microprocessors), 80386 in 1985 (32 bit microprocessor), 80486 in 1989.\\
+
+The x-86 architecture was developed by Intel in the 8086 series. It was primarily a CISC architecture.\\
+
+Way after the paper favoring RISC over CISC written by Patterson, Intel invented a separate chip called 8087 (A math floating point co-processor) which could be plugged onto the mother board alongside the 8086. This x87 architecture would work alongside x86.
+Instead of hacking into the software to optimize things, the 8087 co processor was included to perform operations with complex instructions.  At that time, the problem was that the processor and co-processor communicated slowly as they did not share cache. Nowadays, they are closely integrated.  
+Continuing the timeline, Intel went on to develop the Pentium microprocessors. 
+
+On a side note, we also discussed a bit of Operating Systems: 
+IBM’s PC worked a DOS 1.0 OS. It was a single user, flat file system with no file permissions.  Lisa was a PC developed by Apple, in the early 1980s, with a 16-bit chip, lots of RAM and also was the first PC with a GUI. However, it was too expensive and a toned down version of that was the MACINTOSH, released in 1985. 
+Around 1986, Windows 3.1 was released which dominated PCs for 15 to 20 years.  Windows 95 followed. 
+
 \section{CISC vs. RISC}
 \begin{enumerate}
 	\item CISC Complex Instruction Set Computer. A current example is x86.
